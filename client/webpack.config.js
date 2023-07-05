@@ -16,14 +16,21 @@ module.exports = () => {
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
+      clean: true,
     },
     plugins: [
-      
+      new HtmlWebpackPlugin({
+        title: 'Client Server',
+        template: './index.html',
+      })
     ],
 
     module: {
       rules: [
-        
+        {
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader'],
+        },
       ],
     },
   };
