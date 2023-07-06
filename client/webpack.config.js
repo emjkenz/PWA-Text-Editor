@@ -19,6 +19,7 @@ module.exports = () => {
       new HtmlWebpackPlugin({
         title: 'J.A.T.E - Just Another Text Editor',
         template: './index.html',
+        favicon: './favicon.ico'
       }),
 
       new InjectManifest({
@@ -52,7 +53,7 @@ module.exports = () => {
           use: ['style-loader', 'css-loader'],
         },
         {
-          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
           type: 'src/images',
         },
         {
