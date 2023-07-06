@@ -32,9 +32,11 @@ butInstall.addEventListener('click', async () => {
     
     // We've used the prompt, and can't use it again, throw it away
     deferredPrompt = null;
+
+    butInstall.style.display = 'none';
 });
 
 window.addEventListener('appinstalled', (event) => {
     // Hide the app provided install promotion
-    butInstall.style.display = 'none';
+    console.log('J.A.T.E had been installed');
 });
