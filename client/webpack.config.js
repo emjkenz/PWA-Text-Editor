@@ -27,6 +27,7 @@ module.exports = () => {
       }),
 
       new WebpackPwaManifest({
+        fingerprints: false,
         name: 'J.A.T.E',
         short_name: 'J.A.T.E',
         description: 'Jot down quick code snippets',
